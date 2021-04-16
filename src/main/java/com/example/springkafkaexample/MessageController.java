@@ -15,7 +15,7 @@ public class MessageController {
     private final MessageProducer messageProducer;
 
     @PostMapping
-    public String sendMessage(@RequestParam("message") String message) throws ExecutionException, InterruptedException {
+    public String sendMessage(@RequestParam("message") String message) {
         messageProducer.sendMessage(message);
         return "success";
     }

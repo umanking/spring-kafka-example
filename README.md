@@ -57,6 +57,13 @@ spring:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
 ```
+- auto-offset-rest
+    - offset 정보가 없어졌을때, 어떻게 offset을 reset할 것인지 
+        - lastest: 가장 최근에 생산된 메세지로 offset을 reset한다.
+        - earliest: 가장 오랜된(초기에) 메세지로 offset을 reset 한다.
+        - none: offset 정보가 없으면 Exception을 발생한다.     
+
+
 
 ## 4. Producer, Consumer 구성 
 ```java
